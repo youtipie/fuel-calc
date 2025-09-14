@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:background="@color/background">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calcTask1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingBottom="12dp"/>
+
+        <TextView
+                android:text="@string/prac1_task1_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/taskDescription"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/surface"
+                android:padding="16dp"
+                android:minHeight="220dp"
+                android:elevation="2dp"
+                android:clipToPadding="false"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="6dp">
+
+            <EditText
+                    android:id="@+id/input_hp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Hᵖ"
+                    android:inputType="numberDecimal"/>
+
+            <EditText
+                    android:id="@+id/input_cp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cᵖ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp"/>
+
+            <EditText
+                    android:id="@+id/input_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sᵖ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp"/>
+
+            <EditText
+                    android:id="@+id/input_np"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nᵖ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp"/>
+
+            <EditText
+                    android:id="@+id/input_op"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Oᵖ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp"/>
+
+            <EditText
+                    android:id="@+id/input_wp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Wᵖ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp"/>
+
+            <EditText
+                    android:id="@+id/input_ap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Aᵖ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp"/>
+
+            <Button
+                    android:id="@+id/btn_calc1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Розрахувати"
+                    android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/results1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:background="@color/surface"
+        />
+
+    </LinearLayout>
+
+</ScrollView>
