@@ -13,6 +13,7 @@
             android:theme="@style/Theme.KPI_ANDROID">
         <activity android:name=".prac1.Task2Activity" />
         <activity android:name=".prac1.Task1Activity" />
+        <activity android:name=".prac2.Task1Activity" />
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
