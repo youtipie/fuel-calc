@@ -13,7 +13,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Веб калькулятор викидів шкідливих речовин"
+                android:text="@string/calcTask1"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:paddingBottom="12dp"

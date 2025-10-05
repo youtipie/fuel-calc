@@ -16,6 +16,7 @@
         <activity android:name=".prac2.Task1Activity" />
         <activity android:name=".prac3.Task1Activity" />
         <activity android:name=".prac4.Task1Activity" />
+        <activity android:name=".prac5.Task1Activity" />
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

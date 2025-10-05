@@ -14,15 +14,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/calcTask1"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 android:paddingBottom="12dp"/>
 
         <TextView
-                android:text="Цей калькулятор здатен: розраховувати струму трифазного КЗ, струму однофазного КЗ, та перевіряти на термічну та динамічну стійкість у складі."
+                android:text="Цей калькулятор здатен: порівнювати надійності одноколової та двоколової систем електропередачі та розраховувати збитки від перерв електропостачання у разі застосування однотрансформаторної ГТП."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/taskDescription"/>
+                android:textSize="16sp"
+                android:gravity="left"
+                android:paddingBottom="16dp"/>
 
         <TextView
                 android:layout_width="match_parent"
@@ -31,6 +34,15 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Для одноколової системи:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="4dp"
                 android:paddingBottom="8dp"/>
 
         <LinearLayout
@@ -44,48 +56,46 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="6dp">
 
-            <EditText
-                    android:id="@+id/input_ik"
+            <!-- Контейнер для динамічних елементів ЕПС -->
+            <LinearLayout
+                    android:id="@+id/dynamic_inputs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Iᵏ, A"
-                    android:inputType="numberDecimal"/>
+                    android:orientation="vertical"/>
 
-            <Spinner
-                    android:id="@+id/spinner_cabel"
-                    android:layout_width="match_parent"
+            <!-- Кнопка додавання елемента -->
+            <Button
+                    android:id="@+id/btn_add_element"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"/>
+                    android:text="➕ Додати елемент"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"/>
 
-            <EditText
-                    android:id="@+id/input_tf"
+            <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="tᶠ, с"
+                    android:text="Двоколова система складається з двох ідентичних одноколових і секційного вимикача 10 кВ"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="12dp"/>
+
+            <!-- Поля введення -->
+            <EditText
+                    android:id="@+id/input_zpera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Зпер.а, грн./кВт⋅год"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp"/>
 
             <EditText
-                    android:id="@+id/input_sm"
+                    android:id="@+id/input_zperp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Sᴹ, кВ*А"
-                    android:inputType="numberDecimal"
-                    android:layout_marginTop="8dp"/>
-
-            <EditText
-                    android:id="@+id/input_tm"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Tᴹ, год"
-                    android:inputType="numberDecimal"
-                    android:layout_marginTop="8dp"/>
-
-            <EditText
-                    android:id="@+id/input_sk"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Sᵏ, МВ*А"
+                    android:hint="Зпер.п, грн./кВт⋅год"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp"/>
 
@@ -94,7 +104,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Розрахувати!"
-                    android:layout_marginTop="12dp"/>
+                    android:enabled="false"
+                    android:layout_marginTop="16dp"/>
 
         </LinearLayout>
 
@@ -104,8 +115,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:visibility="gone"
-                android:padding="8dp"
-                android:background="@color/surface"/>
+                android:padding="16dp"
+                android:background="@color/surface"
+        />
 
     </LinearLayout>
 
