@@ -8,6 +8,7 @@ import com.example.kpi_android.prac1.Task1Activity
 import com.example.kpi_android.prac1.Task2Activity
 import com.example.kpi_android.prac2.Task1Activity as Prac2Task1Activity
 import com.example.kpi_android.prac3.Task1Activity as Prac3Task1Activity
+import com.example.kpi_android.prac4.Task1Activity as Prac4Task1Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         // Практична робота 3 - кнопка для завдання
         val btnPrac3Task1 = findViewById<Button>(R.id.btn_prac3_task1)
+
+        // Практична робота 4 - кнопка для завдання
+        val btnPrac4Task1 = findViewById<Button>(R.id.btn_prac4_task1)
 
         // Встановлюємо обробники натискання для кнопок практичної роботи 1
         btnPrac1Task1.setOnClickListener {
@@ -41,6 +45,11 @@ class MainActivity : AppCompatActivity() {
         // Встановлюємо обробник натискання для кнопки практичної роботи 3
         btnPrac3Task1.setOnClickListener {
             startActivity(Intent(this, Prac3Task1Activity::class.java))
+        }
+
+        // Встановлюємо обробник натискання для кнопки практичної роботи 4
+        btnPrac4Task1.setOnClickListener {
+            startActivity(Intent(this, Prac4Task1Activity::class.java))
         }
     }
 }
