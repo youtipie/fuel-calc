@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Практична — Розрахунок силових навантажень"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingBottom="12dp" />
+
+        <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Введіть параметри (замість таблиці):"
+                android:paddingBottom="8dp" />
+
+        <LinearLayout
+                android:id="@+id/inputCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@android:color/white"
+                android:elevation="2dp">
+
+            <EditText
+                    android:id="@+id/input_ph_shlif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Номінальна потужність ЕП (Шліфувальний верстат): Рн, кВт"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="8dp" />
+
+            <EditText
+                    android:id="@+id/input_kb_pol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Коефіцієнт використання (Полірувальний верстат): КВ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="8dp" />
+
+            <EditText
+                    android:id="@+id/input_tg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Коефіцієнт реактивної потужності (Циркулярна пила (13)): tgφ"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="12dp" />
+
+            <Button
+                    android:id="@+id/btn_calc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Розрахувати!" />
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white" />
+
+    </LinearLayout>
+
+</ScrollView>
